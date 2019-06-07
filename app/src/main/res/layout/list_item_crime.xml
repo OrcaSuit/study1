@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        android:id="@+id/list_item_study_solved_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"/>
+
+
+    <Textview
+        android:id="@+id/list_item_study_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/list_item_study_solved_check_box"/>
+
+
+        <TextView
+            android:id="@+id/list_item_study_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/list_item_study_solved_check_box"
+            android:layout_below="@id/list_item_study_title_text_view"
+            android:paddingBottom="4dp"
+            tools:text="Study Date"/>
+
+        <TextView
+            android:id="@+id/list_item_study_hour_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/list_item_study_date_text_view"
+
+            android:layout_below="@id/list_item_study_title_text_view"
+            android:paddingBottom="4dp"
+            tools:text="Study Date"/>
+
+
+
+
+
+</RelativeLayout>

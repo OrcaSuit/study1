@@ -9,11 +9,16 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 public class StudyFragment extends Fragment {
     private Study mStudy;
     private EditText mTitleFeild;
+    private Button mDateButton;
+    private CheckBox mSolvedCheckBox;
 
 
     @Override
@@ -44,6 +49,19 @@ public class StudyFragment extends Fragment {
 
             }
         });
+
+        mDateButton = (Button)v.findViewById(R.id.study_date);
+        mDateButton.setText(mStudy.getDate().toString());
+        mDateButton.setEnabled(false);
+
+        mSolvedCheckBox = (CheckBox)v.findViewById(R.id.study_solved);
+        mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mStudy.setSolved(isChecked);
+            }
+        });
+
         return v;
     }
 }

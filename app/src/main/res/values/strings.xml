@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">study</string>
     <string name="study_title_hint">공부한 내용을 입력하세요.</string>
+    <string name="study_title_label">제목</string>
+    <string name="study_details_label">상세 내역</string>
+    <string name="study_solved_label">공부함.</string>
+
 </resources>
